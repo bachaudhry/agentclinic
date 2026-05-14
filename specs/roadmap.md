@@ -5,6 +5,7 @@
 - Initialize Next.js app with App Router, TypeScript, Tailwind CSS
 - Configure ESLint + Prettier
 - Verify: empty home page renders at `localhost:3000`
+- Add minimal AgentClinic home page (clinic heading, placeholder content)
 
 ## Phase 1 — Database Layer
 
