@@ -35,3 +35,10 @@
 - Create `Layout.tsx` main component composing three subcomponents
 - Create `layout.css` with layout-specific styles (header, main, footer)
 - Import CSS in Layout.tsx and link via `<link>` tag in metadata
+
+### 6. Vitest Test Infrastructure
+
+- Install Vitest as a dev dependency
+- Add `test` and `test:watch` scripts to `package.json`
+- Create `vitest.config.ts` with path alias support
+- Create smoke tests for layout components and home page rendering

@@ -50,3 +50,10 @@
 - [x] `src/components/layout/layout.css` exists with layout styles
 - [x] CSS is imported in `Layout.tsx`
 - [x] Root layout wraps content with Layout component
+
+### 8. Vitest configured and smoke tests passing
+
+- [x] `vitest` is installed as a dev dependency
+- [x] `vitest.config.ts` exists
+- [x] `npm run test` runs all tests and exits successfully (0 failures)
+- [x] `npm run test:watch` runs Vitest in watch mode
