@@ -37,10 +37,10 @@ Tracks LLMs and coding agents used across the project lifecycle to aid transpare
 
 | Model                    | Agent           | Project Phase                        |
 | ------------------------ | -----------     | ------------------------------------ |
-| minimax/minimax-2.7      | Kilo (VS Code)  | Phase 0 — planning & tech stack      |
-| deepseek/deepseek-v4-pro | Kilo (CLI)      | Replanning                           |
-| deepseek/deepseek-v4-pro | Kilo (CLI)      | Phase 0 — responsive design          |
+| MiniMax-2.7              | Kilo (CLI)      | Phase 0 — planning & tech stack      |
+| Deepseek-V4-Pro          | Kilo (CLI)      | Replanning                           |
+| GLM5.1                   | Kilo (CLI)      | Phase 0 — responsive design          |
 
 - **Model**: the LLM model identifier (provider-qualified).
 - **Agent**: the coding agent or IDE tool used (e.g. Kilo, Copilot, Cursor, Aider).
-- **Project Phase**: which phase of the project the model/agent was used during.
+- **Project Phase**: which phase of the project the model/agent was used during. **Note**: Phases were renumbered from this point onwards — original Phases 1–4 are now combined as Phase 1, and all subsequent phases shifted down (old Phase 5 → Phase 2, etc.).
