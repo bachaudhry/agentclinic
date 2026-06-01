@@ -57,3 +57,9 @@
 - [x] `vitest.config.ts` exists
 - [x] `npm run test` runs all tests and exits successfully (0 failures)
 - [x] `npm run test:watch` runs Vitest in watch mode
+
+### 9. Responsive design
+
+- [x] Layout is responsive: header nav adapts on mobile viewports
+- [x] Home page content is readable and properly laid out across breakpoints
+- [x] No horizontal scroll on viewports >= 320px width

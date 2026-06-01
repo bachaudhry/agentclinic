@@ -35,6 +35,8 @@
 - Create `Layout.tsx` main component composing three subcomponents
 - Create `layout.css` with layout-specific styles (header, main, footer)
 - Import CSS in Layout.tsx and link via `<link>` tag in metadata
+- Ensure header nav collapses on mobile (hamburger menu or stacked)
+- Ensure home page content is readable on all viewports
 
 ### 6. Vitest Test Infrastructure
 

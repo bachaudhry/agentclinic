@@ -20,6 +20,7 @@
 ## Styling
 
 - **Tailwind CSS** — rapid UI development, attractive defaults, popular with Next.js
+- **Responsive design** — mobile-first breakpoints (Tailwind `sm`, `md`, `lg`), flexible layouts, readable on all viewports
 
 ## Tooling
 
@@ -38,6 +39,7 @@ Tracks LLMs and coding agents used across the project lifecycle to aid transpare
 | ------------------------ | -----------     | ------------------------------------ |
 | minimax/minimax-2.7      | Kilo (VS Code)  | Phase 0 — planning & tech stack      |
 | deepseek/deepseek-v4-pro | Kilo (CLI)      | Replanning                           |
+| deepseek/deepseek-v4-pro | Kilo (CLI)      | Phase 0 — responsive design          |
 
 - **Model**: the LLM model identifier (provider-qualified).
 - **Agent**: the coding agent or IDE tool used (e.g. Kilo, Copilot, Cursor, Aider).
