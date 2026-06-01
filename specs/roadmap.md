@@ -2,9 +2,11 @@
 
 ## Phase 0 — Scaffolding
 
-- Initialize Next.js app with App Router, TypeScript, Tailwind CSS
-- Configure ESLint + Prettier
-- Verify: empty home page renders at `localhost:3000`
+- [x] Initialize Next.js app with App Router, TypeScript, Tailwind CSS
+- [x] Configure ESLint + Prettier
+- [x] Verify: empty home page renders at `localhost:3000`
+- [x] Add minimal AgentClinic home page (clinic heading, placeholder content)
+- [x] Add main layout with Header/Main/Footer subcomponents
 
 ## Phase 1 — Database Layer
 
