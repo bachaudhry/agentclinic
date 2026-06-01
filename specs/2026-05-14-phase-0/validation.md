@@ -40,3 +40,13 @@
 - [x] Home page displays placeholder welcome content
 - [x] `curl http://localhost:3000` returns 200 OK with AgentClinic page
 - [x] Page renders without console errors
+
+### 7. Main Layout with Header/Main/Footer
+
+- [x] `src/components/layout/Header.tsx` exists as separate file
+- [x] `src/components/layout/Main.tsx` exists as separate file
+- [x] `src/components/layout/Footer.tsx` exists as separate file
+- [x] `src/components/layout/Layout.tsx` composes all three subcomponents
+- [x] `src/components/layout/layout.css` exists with layout styles
+- [x] CSS is imported in `Layout.tsx`
+- [x] Root layout wraps content with Layout component

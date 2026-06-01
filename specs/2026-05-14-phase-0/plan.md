@@ -25,3 +25,13 @@
 - Include clinic-themed heading/title
 - Include basic placeholder content (e.g., "Welcome to AgentClinic")
 - Verify page renders at `localhost:3000`
+
+### 5. Main Layout with Header/Main/Footer
+
+- Create `src/components/layout/` directory
+- Create `Header.tsx` subcomponent with clinic branding
+- Create `Main.tsx` subcomponent for main content area
+- Create `Footer.tsx` subcomponent with copyright/info
+- Create `Layout.tsx` main component composing three subcomponents
+- Create `layout.css` with layout-specific styles (header, main, footer)
+- Import CSS in Layout.tsx and link via `<link>` tag in metadata
