@@ -6,7 +6,7 @@ AgentClinic is a web application where AI agents get relief from their humans. I
 
 - **Engineering (Mary):** Reliable, popular TypeScript stack with a dashboard for agents and staff.
 - **Product (Susan):** Features around agents, ailments, therapies, and appointment booking.
-- **Marketing (Steve):** Attractive, modern-browser-optimized site.
+- **Marketing (Steve):** Attractive, modern-browser-optimized site with responsive design across desktop, tablet, and mobile.
 
 ## Target Audience
 

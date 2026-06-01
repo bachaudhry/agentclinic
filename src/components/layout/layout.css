@@ -39,6 +39,17 @@
   text-decoration: underline;
 }
 
+.ac-header-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--background);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
 .ac-main {
   flex: 1;
   max-width: 1200px;
@@ -62,4 +73,31 @@
 
 .ac-footer-content p {
   margin: 0;
+}
+
+@media (max-width: 640px) {
+  .ac-header-content {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .ac-header-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .ac-header-nav.ac-header-nav-open {
+    display: flex;
+  }
+
+  .ac-header-toggle {
+    display: block;
+  }
+
+  .ac-main {
+    padding: 1.25rem 1rem;
+  }
 }

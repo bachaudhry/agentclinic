@@ -17,6 +17,7 @@
 - **Layout components:** Header, Main, and Footer each in separate files under `src/components/layout/`
 - **Layout composition:** `Layout.tsx` composes Header, Main, Footer subcomponents
 - **Layout styling:** `layout.css` in `src/components/layout/` with flexbox structure
+- **Responsive design:** Mobile-first, header nav collapses on small screens, content adapts across breakpoints
 
 ## Context
 

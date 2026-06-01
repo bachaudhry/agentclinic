@@ -14,4 +14,10 @@ describe("Home page", () => {
       screen.getByText("A clinic for evaluating and improving AI agents")
     ).toBeInTheDocument();
   });
+
+  it("uses responsive classes", () => {
+    render(<Home />);
+    const main = document.querySelector("main");
+    expect(main?.className).toMatch(/max-sm:/);
+  });
 });
