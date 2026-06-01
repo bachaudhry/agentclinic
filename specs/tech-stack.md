@@ -25,3 +25,20 @@
 
 - **ESLint** + **Prettier** — linting and formatting
 - **TypeScript** strict mode — full type safety
+
+## Testing
+
+- **Vitest** — fast TypeScript-native test runner, Vite-compatible, minimal config
+
+## LLMs & Coding Agents
+
+Tracks LLMs and coding agents used across the project lifecycle to aid transparency and reproducibility.
+
+| Model                    | Agent           | Project Phase                        |
+| ------------------------ | -----------     | ------------------------------------ |
+| minimax/minimax-2.7      | Kilo (VS Code)  | Phase 0 — planning & tech stack      |
+| deepseek/deepseek-v4-pro | Kilo (CLI)      | Replanning                           |
+
+- **Model**: the LLM model identifier (provider-qualified).
+- **Agent**: the coding agent or IDE tool used (e.g. Kilo, Copilot, Cursor, Aider).
+- **Project Phase**: which phase of the project the model/agent was used during.
