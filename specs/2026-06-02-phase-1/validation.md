@@ -4,24 +4,24 @@
 
 ### 1. Install Database Dependencies
 
-- [ ] `better-sqlite3`, `@types/better-sqlite3`, `drizzle-orm`, `drizzle-kit` in package.json
-- [ ] `npm install` completes without errors
+- [x] `better-sqlite3`, `@types/better-sqlite3`, `drizzle-orm`, `drizzle-kit` in package.json
+- [x] `npm install` completes without errors
 
 ### 2. Configure Drizzle
 
-- [ ] `drizzle.config.ts` exists and is valid
-- [ ] `drizzle-kit push` runs without error
+- [x] `drizzle.config.ts` exists and is valid
+- [x] `drizzle-kit push` runs without error
 
 ### 3. Define Schema
 
-- [ ] `src/db/schema.ts` compiles with `tsc --noEmit`
-- [ ] Four tables defined: agents, ailments, therapies, appointments
-- [ ] Drizzle relations defined between tables
+- [x] `src/db/schema.ts` compiles with `tsc --noEmit`
+- [x] Four tables defined: agents, ailments, therapies, appointments
+- [x] Drizzle relations defined between tables
 
 ### 4. Create Database Connection
 
-- [ ] `src/db/index.ts` exports a working Drizzle instance
-- [ ] Importing db does not throw
+- [x] `src/db/index.ts` exports a working Drizzle instance
+- [x] Importing db does not throw
 
 ### 5. Write Seed Script
 
