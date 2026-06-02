@@ -1,8 +1,18 @@
 import Database from "better-sqlite3";
+import { existsSync, mkdirSync } from "node:fs";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import * as schema from "./schema";
 
-const sqlite = new Database("./data/agentclinic.db");
+const dbPath = process.env.DATABASE_URL || "./data/agentclinic.db";
+
+const dir = dbPath.substring(0, dbPath.lastIndexOf("/"));
+if (dir && !existsSync(dir)) {
+  mkdirSync(dir, { recursive: true });
+}
+
+const sqlite = new Database(dbPath);
+sqlite.pragma("journal_mode = WAL");
+sqlite.pragma("foreign_keys = ON");
 const db = drizzle(sqlite, { schema });
 
 const agentData = [
@@ -55,27 +65,41 @@ const appointmentData = [
 function seed() {
   console.log("Seeding database...");
 
-  for (const agent of agentData) {
-    db.insert(schema.agents).values(agent).run();
-  }
-  console.log(`Inserted ${agentData.length} agents`);
+  db.transaction(() => {
+    // Clear existing data (order respects FK constraints)
+    db.delete(schema.appointments).run();
+    db.delete(schema.ailments).run();
+    db.delete(schema.therapies).run();
+    db.delete(schema.agents).run();
 
-  for (const therapy of therapyData) {
-    db.insert(schema.therapies).values(therapy).run();
-  }
-  console.log(`Inserted ${therapyData.length} therapies`);
+    // Reset auto-increment counters so IDs start from 1
+    sqlite.exec(
+      "DELETE FROM sqlite_sequence WHERE name IN ('agents', 'therapies', 'ailments', 'appointments')"
+    );
 
-  for (const ailment of ailmentData) {
-    db.insert(schema.ailments).values(ailment).run();
-  }
-  console.log(`Inserted ${ailmentData.length} ailments`);
+    for (const agent of agentData) {
+      db.insert(schema.agents).values(agent).run();
+    }
+    console.log(`Inserted ${agentData.length} agents`);
 
-  for (const appointment of appointmentData) {
-    db.insert(schema.appointments).values(appointment).run();
-  }
-  console.log(`Inserted ${appointmentData.length} appointments`);
+    for (const therapy of therapyData) {
+      db.insert(schema.therapies).values(therapy).run();
+    }
+    console.log(`Inserted ${therapyData.length} therapies`);
+
+    for (const ailment of ailmentData) {
+      db.insert(schema.ailments).values(ailment).run();
+    }
+    console.log(`Inserted ${ailmentData.length} ailments`);
+
+    for (const appointment of appointmentData) {
+      db.insert(schema.appointments).values(appointment).run();
+    }
+    console.log(`Inserted ${appointmentData.length} appointments`);
+  });
 
   console.log("Seed complete.");
+  sqlite.close();
 }
 
 seed();

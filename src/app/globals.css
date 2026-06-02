@@ -4,6 +4,8 @@
   --primary: #1095c1;
   --card-bg: #f7f7f7;
   --card-border: #e0e0e0;
+  --muted: #555555;
+  --white: #ffffff;
   --status-admitted: #1095c1;
   --status-outpatient: #e0a416;
   --status-discharged: #5cb85c;
@@ -44,7 +46,7 @@ body {
   height: 3rem;
   border-radius: 50%;
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +74,7 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: capitalize;
-  color: #fff;
+  color: var(--white);
 }
 
 .status-admitted {
@@ -91,7 +93,7 @@ body {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #555;
+  color: var(--muted);
 }
 
 .agent-profile {
@@ -130,7 +132,7 @@ body {
 .ailment-item p {
   margin: 0;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--muted);
 }
 
 .section-title {

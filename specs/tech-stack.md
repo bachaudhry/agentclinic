@@ -19,8 +19,8 @@
 
 ## Styling
 
-- **Tailwind CSS** — rapid UI development, attractive defaults, popular with Next.js
-- **Responsive design** — mobile-first breakpoints (Tailwind `sm`, `md`, `lg`), flexible layouts, readable on all viewports
+- **PicoCSS** — lightweight semantic CSS framework, replaces Tailwind as of Phase 1
+- **Responsive design** — mobile-first, flexible layouts, readable on all viewports
 
 ## Tooling
 
