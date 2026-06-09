@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { db } from "@/db";
-import { ailments, appointments, therapies } from "@/db/schema";
-import { eq } from "drizzle-orm";
+import { fetchAilmentById, fetchTherapiesForAilment } from "@/db/queries";
 import { notFound } from "next/navigation";
 import { parsePositiveInt } from "@/lib/utils";
 import TherapyList from "@/components/ailments/TherapyList";
@@ -20,25 +19,13 @@ export default async function AilmentDetailPage({
     notFound();
   }
 
-  const ailment = db.query.ailments.findFirst({
-    where: eq(ailments.id, ailmentId),
-    with: { agent: true },
-  }).sync();
+  const ailment = fetchAilmentById(db, ailmentId);
 
   if (!ailment) {
     notFound();
   }
 
-  const linkedTherapies =
-    ailment.agentId !== null
-      ? db
-          .selectDistinct({ therapy: therapies })
-          .from(appointments)
-          .innerJoin(therapies, eq(appointments.therapyId, therapies.id))
-          .where(eq(appointments.agentId, ailment.agentId))
-          .all()
-          .map((row) => row.therapy)
-      : [];
+  const linkedTherapies = fetchTherapiesForAilment(db, ailmentId);
 
   return (
     <section>

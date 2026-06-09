@@ -1,12 +1,11 @@
 import { db } from "@/db";
+import { fetchAllAilmentsWithAgent } from "@/db/queries";
 import AilmentCard from "@/components/ailments/AilmentCard";
 
 export const dynamic = "force-dynamic";
 
 export default async function AilmentsPage() {
-  const allAilments = db.query.ailments.findMany({
-    with: { agent: true },
-  }).sync();
+  const allAilments = fetchAllAilmentsWithAgent(db);
 
   const sorted = [...allAilments].sort((a, b) =>
     (a.name ?? "").localeCompare(b.name ?? "")
