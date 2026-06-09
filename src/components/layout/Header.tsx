@@ -24,6 +24,7 @@ export default function Header() {
           className={`ac-header-nav${navOpen ? " ac-header-nav-open" : ""}`}
         >
           <Link href="/">Home</Link>
+          <Link href="/ailments">Ailments</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
