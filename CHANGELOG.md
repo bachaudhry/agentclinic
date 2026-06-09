@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-06-09
+- Add Phase 2 feature specs (plan, requirements, validation) under specs/2026-06-09-phase-2/
+- Add /ailments page — alphabetical grid of ailment cards with "1 patient: <agent>" badges
+- Add /ailments/[id] page — ailment detail with description, linked agent, and linked therapies
+- Add /therapies/[id] page — therapy detail with description, duration, and linked ailments
+- Add Ailments link to Header navigation
+- Add bidirectional cross-linking between ailment and therapy detail pages
+- Add AilmentCard, TherapyList, and TherapyAilmentList components
+- Add src/db/queries.ts module with testable helpers (fetchAilmentById, fetchTherapiesForAilment, fetchAilmentsForTherapy, etc.)
+- Add AilmentNotFound and TherapyNotFound 404 pages
+- Add CSS for ailment grid, ailment cards, agent badges, and clickable list items
+- Refactor ailment↔therapy join to use appointments table (no direct many-to-many in schema)
+- Add 37 new Vitest tests (15 DB query + 17 component + 5 not-found/header); 86 total tests now pass across 14 files
+- Update tech-stack.md LLM table with Phase 2 entry (MiniMax-M3 / Kilo CLI)
+
 ## 2026-06-02
 - Add Phase 1 feature specs (requirements, plan, validation)
 - Add database layer with Drizzle ORM + better-sqlite3 (schema, config, connection)
