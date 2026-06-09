@@ -12,8 +12,15 @@ describe("Header", () => {
   it("renders navigation links", () => {
     render(<Header />);
     expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText("Ailments")).toBeInTheDocument();
     expect(screen.getByText("About")).toBeInTheDocument();
     expect(screen.getByText("Contact")).toBeInTheDocument();
+  });
+
+  it("Ailments link points to /ailments", () => {
+    render(<Header />);
+    const ailmentsLink = screen.getByRole("link", { name: "Ailments" });
+    expect(ailmentsLink).toHaveAttribute("href", "/ailments");
   });
 
   it("has a mobile nav toggle button", () => {
